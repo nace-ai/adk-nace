@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adk-nace"
+version = "0.1.0"
+description = "Google ADK Drex check. Calls NaceClient.system_one."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["nace-sdk"]
+
+[project.optional-dependencies]
+adk = ["google-adk"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
